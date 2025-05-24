@@ -3,6 +3,7 @@ package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import java.util.Iterator;
 import java.util.List;
@@ -37,5 +38,11 @@ public class BusinessReusables {
 
     public List<WebElement> getTableRows(WebElement tableElem){
         return tableElem.findElements(By.xpath(".//tbody/tr"));
+    }
+
+    public boolean verifyTitle(String titleExpexted) {
+        String title = driver.getTitle();
+        assert title != null;
+        return title.contains(titleExpexted);
     }
 }

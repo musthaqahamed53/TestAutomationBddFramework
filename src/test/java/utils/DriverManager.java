@@ -16,12 +16,15 @@ public class DriverManager {
         FileInputStream fileInputStream = new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//globalSettings.properties");
         Properties properties = new Properties();
         properties.load(fileInputStream);
+        String browser = properties.getProperty("browser");
+        String browser_maven = System.getProperty("browser");
+        browser = browser_maven!=null ? browser_maven : browser;
         if(driver == null){
-            if(properties.getProperty("browser").equalsIgnoreCase("chrome")){
+            if(browser.equalsIgnoreCase("chrome")){
                 driver = new ChromeDriver();
-            } else if (properties.getProperty("browser").equalsIgnoreCase("firefox")) {
+            } else if (browser.equalsIgnoreCase("firefox")) {
                 driver = new FirefoxDriver();
-            } else if (properties.getProperty("browser").equalsIgnoreCase("edge")) {
+            } else if (browser.equalsIgnoreCase("edge")) {
                 driver = new EdgeDriver();
             }
 
