@@ -43,7 +43,7 @@ public class OffersPage {
         }
         // Get all data rows (excluding header row)
         List<WebElement> rows = table.findElements(By.xpath(".//tbody/tr"));
-        ArrayList<String> columnData = new ArrayList<String>();
+        ArrayList<String> columnData = new ArrayList<>();
 
         for (WebElement row : rows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));

@@ -40,7 +40,7 @@ public class MainSteps {
 	public void try_for_capcha_regex(String string) {
 		System.out.println("I regex capcha the " + string);
 		if(string.contentEquals("capcha3")) {
-			Assert.assertTrue(false);
+            Assert.fail();
 		}
 		
 	}

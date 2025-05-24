@@ -1,7 +1,6 @@
 package pageObjects;
 
 import org.openqa.selenium.WebDriver;
-import stepDefinitions.CartPageStepDef;
 
 public class PageObjectManager {
 

@@ -1,18 +1,11 @@
 package stepDefinitions;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-
 import io.cucumber.java.en.Then;
 import pageObjects.LandingPage;
 import pageObjects.OffersPage;
 import utils.TestContextSetup;
+
+import java.util.ArrayList;
 
 public class OfferPageStepDef {
 	TestContextSetup testContextSetup;

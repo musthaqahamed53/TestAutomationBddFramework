@@ -54,7 +54,7 @@ public class CartPage {
 
     }
 
-    public void checkForButtonsInCartPage() throws InterruptedException {
+    public void checkForButtonsInCartPage(){
         String randomStr = UUID.randomUUID().toString().replace("-", "").substring(0, 10);
         driver.findElement(promoField).sendKeys(randomStr);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
